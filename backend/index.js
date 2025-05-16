@@ -3,7 +3,7 @@ const path = require('path');
 const app = express();
 const helloRoute = require('./routes/hello');
 
-app.use(express.static(path.join(__dirname, '..')));
+app.use(express.static(path.resolve(__dirname, '..')));
 app.use('/hello', helloRoute);
 
 const PORT = process.env.PORT || 3000;
